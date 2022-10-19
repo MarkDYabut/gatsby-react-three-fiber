@@ -13,7 +13,11 @@
     "gatsby-transformer-sharp": "^4.24.0",
     "prop-types": "^15.8.1",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "@react-three/drei": "^9.4.2",
+    "@react-three/fiber": "^8.0.11",
+    "@react-three/postprocessing": "^2.3.2",
+    "three": "0.139.2"
   },
   "devDependencies": {
     "prettier": "^2.7.1"
@@ -24,7 +28,7 @@
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "gatsby develop --host=0.0.0.0",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
     "start": "gatsby develop",
     "serve": "gatsby serve",

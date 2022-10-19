@@ -34,16 +34,17 @@ const links = [
 ]
 
 const samplePageLinks = [
-  {
-    text: "Page 2",
-    url: "page-2",
-    badge: false,
-    description:
-      "A simple example of linking to another page within a Gatsby site",
-  },
-  { text: "TypeScript", url: "using-typescript" },
-  { text: "Server Side Rendering", url: "using-ssr" },
-  { text: "Deferred Static Generation", url: "using-dsg" },
+  // {
+  //   text: "Page 2",
+  //   url: "page-2",
+  //   badge: false,
+  //   description:
+  //     "A simple example of linking to another page within a Gatsby site",
+  // },
+  // { text: "TypeScript", url: "using-typescript" },
+  // { text: "Server Side Rendering", url: "using-ssr" },
+  // { text: "Deferred Static Generation", url: "using-dsg" },
+  { text: "React Three Fiber Demo 1", url: "r3f-1"}
 ]
 
 const moreLinks = [
