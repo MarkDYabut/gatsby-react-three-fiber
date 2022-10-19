@@ -44,7 +44,8 @@ const samplePageLinks = [
   // { text: "TypeScript", url: "using-typescript" },
   // { text: "Server Side Rendering", url: "using-ssr" },
   // { text: "Deferred Static Generation", url: "using-dsg" },
-  { text: "React Three Fiber Demo 1", url: "r3f-1"}
+  { text: "React Three Fiber Demo 1", url: "r3f-1"},
+  { text: "React Three Fiber Demo 2", url: "r3f-2"}
 ]
 
 const moreLinks = [
