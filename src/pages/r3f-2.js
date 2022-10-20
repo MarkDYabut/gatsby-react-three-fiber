@@ -22,18 +22,18 @@ import FloatingRocks from "../r3f/portalsmasks/FloatingRocks";
 import SceneParticles from "../r3f/portalsmasks/SceneParticles";
 
 export default function PortalsMasks() {
-    let lightColor = new Color(1, 0.2, 0.1);
-    let mesh = new Mesh(
-        new CylinderGeometry(0.3, 0.3, 0.2, 20),
-        new MeshBasicMaterial({
-            color: lightColor,
-            transparent: true,
-            opacity: 1,
-        })
-    );
-    mesh.rotation.x = Math.PI * 0.5;
-    mesh.position.set(1.17, 10.7, -4.1);
-    mesh.scale.set(1.5, 1, 1);
+    // let lightColor = new Color(1, 0.2, 0.1);
+    // let mesh = new Mesh(
+    //     new CylinderGeometry(0.3, 0.3, 0.2, 20),
+    //     new MeshBasicMaterial({
+    //         // color: lightColor,
+    //         transparent: true,
+    //         opacity: 1,
+    //     })
+    // );
+    // mesh.rotation.x = Math.PI * 0.5;
+    // mesh.position.set(1.17, 10.7, -4.1);
+    // mesh.scale.set(1.5, 1, 1);
 
     const isBrowser = typeof window !== "undefined"
 
@@ -54,7 +54,7 @@ export default function PortalsMasks() {
                             rotationIntensity={0.6}
                             floatIntensity={0.6}
                         >
-                            <primitive object={mesh} />
+                            {/* <primitive object={mesh} /> */}
                             <spotLight
                                 penumbra={1}
                                 distance={500}
@@ -62,7 +62,7 @@ export default function PortalsMasks() {
                                 attenuation={1}
                                 anglePower={3}
                                 intensity={0.3}
-                                color={lightColor}
+                                // color={lightColor}
                                 position={[1.19, 10.85, -4.45]}
                                 target-position={[0, 0, -1]}
                             />
