@@ -80,14 +80,21 @@ const CarShow = () => (
 )
 
 export default function r3f1() {
+
+    const isBrowser = typeof window !== "undefined"
+
     return (
         <>
             {/* <Layout> */}
-                <Suspense fallback={null}>
+            <Suspense fallback={null}>
+
+                {isBrowser && (
                     <Canvas shadows>
                         <CarShow />
                     </Canvas>
-                </Suspense>
+                )}
+
+            </Suspense>
             {/* </Layout> */}
         </>
     );

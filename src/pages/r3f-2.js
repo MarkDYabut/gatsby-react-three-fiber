@@ -35,44 +35,47 @@ export default function PortalsMasks() {
     mesh.position.set(1.17, 10.7, -4.1);
     mesh.scale.set(1.5, 1, 1);
 
+    const isBrowser = typeof window !== "undefined"
+
     return (
         <>
             {/* <Layout> */}
             <Suspense fallback={null}>
-                <Canvas shadows>
-                    <Environment background={"only"} files={'/portalsmasks/textures/bg.hdr'} />
-                    <Environment background={false} files={'/portalsmasks/textures/envmap.hdr'} />
+                {isBrowser && (
+                    <Canvas shadows>
+                        <Environment background={"only"} files={'/portalsmasks/textures/bg.hdr'} />
+                        <Environment background={false} files={'/portalsmasks/textures/envmap.hdr'} />
 
-                    <PerspectiveCamera makeDefault fov={50} position={[-1.75, 10.85, 20.35]} />
-                    <OrbitControls target={[1, 5, 0]} maxPolarAngle={Math.PI * 0.5} />
+                        <PerspectiveCamera makeDefault fov={50} position={[-1.75, 10.85, 20.35]} />
+                        <OrbitControls target={[1, 5, 0]} maxPolarAngle={Math.PI * 0.5} />
 
-                    <Float
-                        speed={0.5}
-                        rotationIntensity={0.6}
-                        floatIntensity={0.6}
-                    >
-                        <primitive object={mesh} />
-                        <spotLight
-                            penumbra={1}
-                            distance={500}
-                            angle={60.65}
-                            attenuation={1}
-                            anglePower={3}
-                            intensity={0.3}
-                            color={lightColor}
-                            position={[1.19, 10.85, -4.45]}
-                            target-position={[0, 0, -1]}
-                        />
-                        <Portal />
-                        <Rocks />
-                        <FloatingIsland />
-                        <Words />
-                        <Trees />
-                        <Grass />
-                        <SceneParticles />
-                    </Float>
-                    <FloatingRocks />
-                    {/* <EffectComposer stencilBuffer={true}>
+                        <Float
+                            speed={0.5}
+                            rotationIntensity={0.6}
+                            floatIntensity={0.6}
+                        >
+                            <primitive object={mesh} />
+                            <spotLight
+                                penumbra={1}
+                                distance={500}
+                                angle={60.65}
+                                attenuation={1}
+                                anglePower={3}
+                                intensity={0.3}
+                                color={lightColor}
+                                position={[1.19, 10.85, -4.45]}
+                                target-position={[0, 0, -1]}
+                            />
+                            <Portal />
+                            <Rocks />
+                            <FloatingIsland />
+                            <Words />
+                            <Trees />
+                            <Grass />
+                            <SceneParticles />
+                        </Float>
+                        <FloatingRocks />
+                        {/* <EffectComposer stencilBuffer={true}>
                         <DepthOfField
                             focusDistance={0.012}
                             focalLength={0.015}
@@ -96,7 +99,8 @@ export default function PortalsMasks() {
                             blur={true}
                         />
                     </EffectComposer> */}
-                </Canvas>
+                    </Canvas>
+                )}
             </Suspense>
             {/* </Layout> */}
         </>
